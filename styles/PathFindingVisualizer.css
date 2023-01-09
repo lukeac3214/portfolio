@@ -1,0 +1,32 @@
+.pathFind-small-device, .pathFind-large-device {
+    background-color: white;
+    border-radius: 10px;
+}
+
+.pathFind-title {
+    text-align: center;
+}
+
+.pathFind-slider {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.pathFind-btn-small {
+    height: 50%;
+    width: 100%;
+    font-size: 12px;
+    font-weight: "bold";
+}
+
+.pathFind-btn-large {
+    height: 100%;
+    width: 100%;
+    font-size: 12px;
+    font-weight: "bold";
+}
+
+.pathFind-grid {
+    margin-top: 2px;
+}

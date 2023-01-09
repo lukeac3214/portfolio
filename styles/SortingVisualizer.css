@@ -1,0 +1,81 @@
+.bar-array {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.bar {
+    width: 10px;
+    display: inline-block;
+    margin: 0 1px;
+}
+
+.controls {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.sort-btns {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.inner-btn-box {
+    display: flex;
+    flex-direction: row;
+}
+
+.speedControl {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+    font-size: 12px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.slider {
+    width: 85%;
+}
+
+.Button {
+    font-weight: bold;
+}
+
+@media only screen and (max-width: 700px) {
+    .speedControl {
+        width: 95%;
+    }
+
+    .controls {
+        flex-direction: column;
+        align-items: center;
+    }
+    .sort-btns {
+        flex-direction: column;
+        align-content: center;
+        width: 100%;
+    }
+    .inner-sort-btns1 {
+        align-self: center;
+    }
+    .inner-sort-btns2 {
+        align-self: center;
+    }
+    .inner-btn {
+        width: 100%;
+    }
+    .inner-btn-box {
+        flex-direction: none;
+    }
+    .resetBtn {
+        width: 100%;
+    }
+    .slider {
+        width: 100%;
+    }
+}

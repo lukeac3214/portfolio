@@ -1,0 +1,116 @@
+/* outer div for game grid */
+.gamegrid {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+
+}
+
+
+/* inner div for game grid (large screens) */
+.innergg {
+  border: 5px black solid;
+  border-radius: 100px;
+  width: 100%;
+  padding: 40px;
+  background-color: white;
+}
+
+
+/* inner div for game grid (large screens) */
+.innergg-small {
+  border: 5px black solid;
+  border-radius: 100px;
+  width: 95%;
+  padding: 25px;
+  background-color: white;
+}
+
+
+/* styling for game scores */
+.gamescores {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.player1 {
+  color: red;
+}
+
+.player2 {
+  color: green;
+}
+
+.player3 {
+  color: blue;
+}
+
+
+/* styling for restart button */
+.restartbtn {
+  background-color: white;
+  border-radius: 5px;
+}
+
+
+/* hover effect for game lines */
+.gameline:hover {
+  stroke-opacity: 1;
+}
+
+
+/* stlying for red player's clicked line */
+.selectedlinered {
+  stroke-opacity: 1;
+  stroke: red;
+}
+
+
+/* stlying for green player's clicked line */
+.selectedlinegreen {
+  stroke-opacity: 1;
+  stroke: green;
+}
+
+
+/* stlying for blue player's clicked line */
+.selectedlineblue {
+  stroke-opacity: 1;
+  stroke: blue;
+}
+
+
+
+/* outer popup div which covers whole screen an slightly obscures background */
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  /* obscure background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* div for actual popup */
+.popup-inner {
+  border-radius: 15px;
+  position: relative;
+  padding: 25px;
+  width: 50%;
+  max-width: 500px;
+  min-width: 300px;
+  background-color: white;
+}
+
+/* styling for x button */
+.popup-inner .x-btn {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+}

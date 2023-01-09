@@ -1,0 +1,62 @@
+.gridSquare {
+  width: 25px;
+  height: 25px;
+  outline: 1px solid black;
+  display: inline-block;
+  margin-block: -2px;
+}
+
+.start {
+  background-color: darkgreen;
+}
+
+.finish {
+  background-color: #c90000;
+}
+
+.wall {
+  background-color: black;
+}
+
+.visited {
+  animation-name: visitedSquareAnimation;
+  animation-duration: 1s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+}
+
+.shortest-path {
+  animation-name: shortestPathAnimation;
+  animation-duration: 2s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+
+@keyframes visitedSquareAnimation {
+  0% {
+    transform: scale(1.1);
+    background-color: #c90000;
+    border-radius: 100%;
+  }
+
+  50% {
+    transform: scale(1.25);
+    background-color: orangered;
+    border-radius: 50%;
+  }
+
+  100% {
+    transform: rotate(-270deg);
+    background-color: rgba(247, 247, 44, 0.753)
+  }
+}
+
+@keyframes shortestPathAnimation {
+  0% {
+    background-color: lightgreen; 
+  }
+
+  50%, 100% {
+    background-color: green;
+  }
+}
