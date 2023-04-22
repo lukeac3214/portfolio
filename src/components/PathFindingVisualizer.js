@@ -456,7 +456,7 @@ export default function PathfindingVisualizer() {
 
       {/* Popup with shortest pathlength if availabile */}
       <Popup trigger={popUp} setTrigger={() => setPopUp(false)} >
-        {shortestPath ? <h1>Shortest path was found!</h1> : <h1>A path was found!</h1>}
+        {pathLen > 1 ? (shortestPath ? <h1>Shortest path was found!</h1> : <h1>A path was found!</h1>) : <h1></h1>}
         {foundPath ? <p>Path is {pathLen} units long</p> : <p>Path not possible!</p>}
       </Popup>
 
