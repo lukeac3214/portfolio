@@ -90,16 +90,25 @@ export default class GameGrid extends Component {
 
   // restartGame resets the global variables to their defaults, and resets the state to player 1 and gameover false
   restartGame() {
+    let index
     for (let index in selectedSquares) { selectedSquares[index] = false }
     for (let index in playerSquareWins) { playerSquareWins[index] = 0 }
     selectedLines = []
+    index = 1
     for (let square of squares) {
+      // remove any text in square
+      if (document.getElementById(`square${index}`) !== null) {
+        document.getElementById(`square${index}`).textContent = "" 
+      }
+      index++
       // reset all selected lines to gamelines
       for (let line of square) {
-        document.getElementById(line).setAttribute('class', 'gameline')
+        if (document.getElementById(line) !== null) {
+          document.getElementById(line).setAttribute('class', 'gameline')
+        }
+        
       }
     }
-    for (let index in squares) { document.getElementById(`square${++index}`).textContent = "" }
     this.setState({ player: 1, gameOver: false });
   }
 
