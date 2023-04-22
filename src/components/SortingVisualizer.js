@@ -4,8 +4,8 @@ import { getHeapSortAnimations } from '../SortingAlgorithms/HeapSort.js';
 import { getQuickSortAnimations } from '../SortingAlgorithms/QuickSort.js';
 import { getBubbleSortAnimations } from '../SortingAlgorithms/BubbleSort.js';
 import '../styles/SortingVisualizer.css';
-import Slider from '@material-ui/core/Slider'
-import { Button } from '@material-ui/core';
+import Slider from '@mui/material/Slider'
+import { Button } from '@mui/material';
 import { useEffect, useState } from 'react';
 
 // valid = true when no sorting/animations are in progress
@@ -170,6 +170,7 @@ export default function SortingVisualizer() {
                 <Button
                     className='resetBtn'
                     variant='outlined'
+                    color='inherit' 
                     onClick={() => resetBarArray()}>
                     Reset Bars
                 </Button>
@@ -196,21 +197,25 @@ export default function SortingVisualizer() {
                     <div className='inner-btn-box'>
                         <Button
                             variant='outlined'
+                            color='inherit' 
                             onClick={() => quickSort()}>
                             Quick Sort
                         </Button>
                         <Button
                             variant='outlined'
+                            color='inherit' 
                             onClick={() => heapSort()}>
                             Heap Sort
                         </Button>
                         <Button
                             variant='outlined'
+                            color='inherit' 
                             onClick={() => insertSort()}>
                             Insert Sort
                         </Button>
                         <Button
                             variant='outlined'
+                            color='inherit' 
                             onClick={() => bubbleSort()}>
                             Bubble Sort
                         </Button>

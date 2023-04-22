@@ -4,8 +4,8 @@ import { dijkstra } from '../PathFindAlgorithms/Dijkstra.js';
 import { aStar } from '../PathFindAlgorithms/AStar.js';
 import { breadthFirstSearch } from '../PathFindAlgorithms/BreadthFirstSearch.js';
 import { depthFirstSearch } from '../PathFindAlgorithms/DepthFirstSearch.js';
-import Slider from '@material-ui/core/Slider';
-import { Grid, Box, Button } from '@material-ui/core';
+import Slider from '@mui/material/Slider';
+import { Grid, Box, Button } from '@mui/material';
 import Popup from '../components/Popup.js';
 import { useEffect, useState } from 'react';
 import '../styles/PathFindingVisualizer.css';
@@ -245,6 +245,7 @@ export default function PathfindingVisualizer() {
       default:
         break;
     }
+
     const nodesInShortestPathOrder = getShortestPath(finishNode);
     pathLen = nodesInShortestPathOrder.length;
     animatePath(visitedNodesInOrder, nodesInShortestPathOrder);
@@ -299,6 +300,7 @@ export default function PathfindingVisualizer() {
       neighbors: getNeighbors(col, row),
       color: "white",
       g: Infinity,
+      heapIndex: null
     };
   };
 
@@ -369,13 +371,16 @@ export default function PathfindingVisualizer() {
             <Button
               className="pathFind-btn-small"
               variant='outlined'
+              color='inherit' 
               onClick={() => resetGrid()}>
               Clear Grid
             </Button>
 
             <Button
               className="pathFind-btn-small"
-              variant='outlined' onClick={() =>
+              variant='outlined' 
+              color='inherit' 
+              onClick={() =>
                 createRandWalls()}>
               Random Walls
             </Button>
@@ -389,6 +394,7 @@ export default function PathfindingVisualizer() {
             <Button
               className="pathFind-btn-large"
               variant='outlined'
+              color='inherit' 
               onClick={() => handleAlgoBtnClick("aStar")}>
               A-Star
             </Button>
@@ -397,6 +403,7 @@ export default function PathfindingVisualizer() {
             <Button
               className="pathFind-btn-large"
               variant='outlined'
+              color='inherit' 
               onClick={() => handleAlgoBtnClick("Djikstra")}>
               Dijkstra
             </Button>
@@ -405,6 +412,7 @@ export default function PathfindingVisualizer() {
             <Button
               className="pathFind-btn-large"
               variant='outlined'
+              color='inherit' 
               onClick={() => handleAlgoBtnClick("BFS")}>
               Breadth-First
             </Button>
@@ -413,6 +421,7 @@ export default function PathfindingVisualizer() {
             <Button
               className="pathFind-btn-large"
               variant='outlined'
+              color='inherit' 
               onClick={() => handleAlgoBtnClick("DFS")}>
               Depth-First
             </Button>

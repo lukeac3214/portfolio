@@ -1,3 +1,4 @@
+// Standard BFS using a queue to process nodes in FIFO order
 export function breadthFirstSearch(grid, startNode) {
   const visitedNodesInOrder = [];
   startNode.color = "grey";
